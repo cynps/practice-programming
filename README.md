@@ -14,11 +14,33 @@
 
 check
 ```
-PS C:\dev\repo\atcoder> g++ --version
+PS C:\dev\repo\practice-programming> g++ --version
 g++.exe (x86_64-posix-sjlj-rev0, Built by MinGW-W64 project) 8.1.0
 Copyright (C) 2018 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+```
+
+コンパイルと実行のテスト
+```g++
+PS C:\dev\repo\practice-programming\atcoder\_practice-contest> g++ .\a.cpp
+PS C:\dev\repo\practice-programming\atcoder\_practice-contest> .\a.exe
+72
+128 256
+myonmyon
+456 myonmyon
+```
+```gcc
+PS C:\dev\repo\practice-programming\atcoder\_practice-contest> gcc .\a.cpp -lstdc++ -o v
+PS C:\dev\repo\practice-programming\atcoder\_practice-contest> ls v*
+
+
+    ディレクトリ: C:\dev\repo\practice-programming\atcoder\_practice-contest
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        2023/02/14      2:20          62143 v.exe
 ```
 
 ## C++/G++ on Ubuntu

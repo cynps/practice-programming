@@ -30,3 +30,7 @@
 *.exe
 *.out
 *.app
+
+# bat
+atcoder/g.bat
+atcoder/*/g.bat
