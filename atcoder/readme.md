@@ -1,4 +1,4 @@
 # atcoder note
 
 problems:  
-https://kenkoooo.com/atcoder/#/table/
+https://kenkoooo.com/atcoder/#/table/cynps
