@@ -33,4 +33,10 @@
 
 # bat
 atcoder/g.bat
+atcoder/cp.bat
 atcoder/*/g.bat
+atcoder/*/cp.bat
+
+# template
+atcoder/template.cpp
+atcoder/*/template.cpp
