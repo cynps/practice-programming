@@ -1,8 +1,8 @@
 #include <bits/stdc++.h>
-
-// using
+#define rep(i,a,b) for(int i=a; i<b; ++i)
 using namespace std;
-using ll = long long;
+typedef long long ll;
+const ll mod97 = 1000000007; // 10^9+7
 
 // input 
 int solve() {
