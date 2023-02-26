@@ -4,14 +4,19 @@
 using namespace std;
 typedef long long ll;
 typedef long double ld;
-const ll mod97 = 1000000007; // 10^9+7
+const ll mod = 1e9+7;
 
-// input 
+int N;
+
 int solve() {
-  return 0;
+  int ans = 0;
+  return ans;
 }
 
 int main() {
-  solve();
+  cin >> N;
+
+  int ans = solve();
+  cout << ans << endl;
   return 0;
 }
