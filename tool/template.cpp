@@ -4,12 +4,12 @@
 using namespace std;
 typedef long long ll;
 typedef long double ld;
-// const ll mod = 1e9+7;
+// const int mod = 1e9+7;
 const int mod = 998244353;
 
 int N;
 
-ll modpow(ll a, ll n, ll mod) {
+ll modpow(ll a, ll n, int mod) {
   ll res = 1;
   while (n>0) {
     if (n & 1) res = res * a % mod;
