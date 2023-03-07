@@ -6,6 +6,7 @@ typedef long long ll;
 typedef long double ld;
 // const int mod = 1e9+7;
 const int mod = 998244353;
+const ld PI = 3.141592653589793;
 
 int N;
 
@@ -47,6 +48,11 @@ ll modpow(ll a, ll n, int mod) {
   return res;
 }
 
+int gcd(int p, int q) {
+	if(p % q == 0) return q;
+	return gcd(q, p % q);
+}
+
 int solve() {
   int ans = 0;
   return ans;
@@ -56,6 +62,8 @@ int main() {
   cin >> N;
 
   int ans = solve();
+
+	// cout << fixed << setprecision(20);
   cout << ans << endl;
   return 0;
 }
