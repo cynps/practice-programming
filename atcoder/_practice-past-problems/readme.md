@@ -17,3 +17,9 @@ sort
 
 bingo
 * ABC157 b
+
+gcd
+* ABC162 c
+
+bit全探索
+* ABC289 c
