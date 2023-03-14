@@ -1,8 +1,8 @@
 @echo off
-mkdir ..\atcoder\AtCoderBeginnerContest\%1
-copy template.cpp ..\atcoder\AtCoderBeginnerContest\%1\a.cpp
-copy template.cpp ..\atcoder\AtCoderBeginnerContest\%1\b.cpp
-copy template.cpp ..\atcoder\AtCoderBeginnerContest\%1\c.cpp
-copy template.cpp ..\atcoder\AtCoderBeginnerContest\%1\d.cpp
-copy template.cpp ..\atcoder\AtCoderBeginnerContest\%1\e.cpp
-copy g.bat ..\atcoder\AtCoderBeginnerContest\%1\g.bat
+mkdir .\%1
+copy ..\tool\template-abc.cpp .\%1\%1a.cpp
+copy ..\tool\template-abc.cpp .\%1\%1b.cpp
+copy ..\tool\template-abc.cpp .\%1\%1c.cpp
+copy ..\tool\template.cpp .\%1\%1d.cpp
+copy ..\tool\template.cpp .\%1\%1e.cpp
+copy ..\tool\g.bat .\%1\g.bat
