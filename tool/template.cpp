@@ -53,17 +53,15 @@ int gcd(int p, int q) {
 	return gcd(q, p % q);
 }
 
-int solve() {
-  int ans = 0;
-  return ans;
-}
-
 int main() {
   cin >> N;
 
-  int ans = solve();
+  int ans = N;
 
+	// if (ans == 1) cout << "Yes" << endl;
+	// else cout << "No" << endl;
 	// cout << fixed << setprecision(20);
   cout << ans << endl;
+
   return 0;
 }

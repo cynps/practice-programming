@@ -16,9 +16,12 @@ int gcd(int p, int q) {
 int main() {
   cin >> N;
 
-  int ans = 0;
+  int ans = N;
 
+	// if (ans == 1) cout << "Yes" << endl;
+	// else cout << "No" << endl;
 	// cout << fixed << setprecision(20);
   cout << ans << endl;
+
   return 0;
 }
