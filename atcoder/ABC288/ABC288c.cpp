@@ -2,18 +2,20 @@
 #define rp(i,n) for (int i=0; i<(n); ++i)
 #define rep(i,a,b) for(int i=a; i<b; ++i)
 #define rrep(i,a,b) for(int i=a; b<i; --i)
-#define bitrep(bit,n) for(int bit=0; bit<(1<<n); ++bit)
-#define bitfind(bit,i,n) for(int i=0; i<(n); ++i) if(bit & (1<<i))
 using namespace std;
 typedef long long ll;
 typedef long double ld;
-// const int mod = 1e9+7;
-const int mod = 998244353;
 const ld PI = 3.141592653589793;
 inline int ctoi(char c) {return c-'0';}
 inline char itoc(int i) {return i+'0';}
 
-int N;
+int N, M;
+
+int gcd(int p, int q) {
+	if(p % q == 0) return q;
+	return gcd(q, p % q);
+}
+
 
 class UnionFind {
 public:
@@ -43,25 +45,21 @@ private:
 	std::vector<int> m_sizes;
 };
 
-ll modpow(ll a, ll n, int mod) {
-  ll res = 1;
-  while (n>0) {
-    if (n & 1) res = res * a % mod;
-    a = a * a % mod;
-    n >>= 1;
-  }
-  return res;
-}
-
-int gcd(int p, int q) {
-	if(p % q == 0) return q;
-	return gcd(q, p % q);
-}
-
 int main() {
-  cin >> N;
+  cin >> N >> M;
+	UnionFind uf(N);
+	int a[M], b[M];
 
-  int ans = N;
+	rep(i,0,M) cin >> a[i] >> b[i];
+
+	int ans = 0;
+	rep(i,0,M) {
+		a[i]--;
+		b[i]--;
+		// cout << "ufai:" << uf.find(a[i]) << " ufbi:" << uf.find(b[i]) << endl;
+		if (uf.connected(a[i], b[i])) ++ans;
+		uf.merge(a[i], b[i]);
+	}
 
 	// if (ans == 1) cout << "Yes" << endl;
 	// else cout << "No" << endl;
