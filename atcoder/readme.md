@@ -24,8 +24,19 @@ bingo
 gcd
 * ABC162 c
 
-bit全探索
+bit演算
 * ABC289 c
+* ABC295 d
 
 union find
 * ABC292 c
+
+queue
+* ABC294 d
+
+dp
+* DPまとめコンテスト
+* アルゴ式
+
+累積和
+* ABC295 d
