@@ -8,6 +8,7 @@ typedef long double ld;
 const ld PI = 3.141592653589793;
 inline int ctoi(char c) {return c-'0';}
 inline char itoc(int i) {return i+'0';}
+inline int alpint(char c) {return (int)c-64;}
 
 int N;
 
@@ -17,14 +18,16 @@ int gcd(int p, int q) {
 }
 
 int main() {
-  cin >> N;
+	cin >> N;
 
-  int ans = N;
+	int ans = N;
+
+	// cout << alpint('A') << " " << alpint('Z') << endl; // 1 26
 
 	// if (ans == 1) cout << "Yes" << endl;
 	// else cout << "No" << endl;
 	// cout << fixed << setprecision(20);
-  cout << ans << endl;
+	cout << ans << endl;
 
-  return 0;
+	return 0;
 }
