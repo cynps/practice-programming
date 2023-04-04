@@ -6,6 +6,7 @@ typedef long double ld;
 // const int mod = 1e9+7;
 const int mod = 998244353;
 const ld PI = 3.141592653589793;
+
 inline int ctoi(char c) {return c-'0';}
 inline char itoc(int i) {return i+'0';}
 inline int alpint(char c) {return (int)c-64;} // A = 1
