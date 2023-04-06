@@ -17,6 +17,7 @@ pow
 
 sort
 * ABC153 c
+* ABC260 b // struct
 
 bingo
 * ABC157 b
@@ -28,11 +29,11 @@ bit演算
 * ABC289 c
 * ABC295 d
 
-union find
-* ABC292 c
-
 queue
 * ABC294 d
+
+stack
+* ABC283 d
 
 dp
 * DPまとめコンテスト
@@ -40,3 +41,17 @@ dp
 
 累積和
 * ABC295 d
+
+BFS (queueで実装)
+* 
+
+DFS (stackで実装)
+* 
+
+## 分類メモ：グラフ
+
+二部グラフ
+* ABC282 d
+
+union find
+* ABC292 c
