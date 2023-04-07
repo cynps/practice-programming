@@ -27,6 +27,7 @@ gcd
 
 bit演算
 * ABC289 c
+* ABC293 c // bit全探索
 * ABC295 d
 
 queue
