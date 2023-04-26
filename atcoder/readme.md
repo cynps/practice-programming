@@ -60,4 +60,3 @@ DFS (stackで実装)
 
 union find
 * ABC292 d
-* ABC277 c
