@@ -37,7 +37,11 @@ atcoder/cp.bat
 atcoder/*/g.bat
 atcoder/*/cp.bat
 atcoder/*/*/g.bat
+atcoder/cr_cpp.bat
+leetcode/g.bat
+leetcode/cr_cpp_leetcode.bat
 
 # template
 atcoder/template.cpp
 atcoder/*/template.cpp
+atcoder/test/*
