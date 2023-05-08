@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<button onclick="test5()">check</button>
+
+<script type="text/javascript">
+
+const isPrimitive = (value) => {
+  const type = typeof value;
+  // alert(type);
+  return (
+    type === 'string' ||
+    type === 'number' ||
+    type === 'bigint' ||
+    type === 'boolean' ||
+    type === 'symbol' ||
+    type === 'undefined' ||
+    value === null
+  );
+}
+
+const getWrapperClass = (value) => {
+  if (typeof value === 'string') {
+    return String;
+  } else if (typeof value === 'number') {
+    return Number;
+  } else if (typeof value === 'bigint') {
+    return BigInt;
+  } else if (typeof value === 'boolean') {
+    return Boolean;
+  } else if (typeof value === 'symbol') {
+    return Symbol;
+  } else if (value === null || typeof value === 'undefined') {
+    throw new Error('There is no wrapper class for null or undefined');
+  } else {
+    throw new Error('The value is not a primitive');
+  }
+}
+
+/**
+ * @param {any} object
+ * @param {any} classFunction
+ * @return {boolean}
+ */
+var checkIfInstanceOf = function(obj, classFunction) {
+  // alert(typeof obj);
+  // alert(classFunction);
+
+  if (obj === classFunction) {
+    if (Object.is(obj, Object) && Object.is(classFunction, Object)) return true;
+    else return false;
+  }
+
+  if (isPrimitive(classFunction)) return false;
+  if (isPrimitive(obj)) {
+    try {
+      const wrapperclasstype = getWrapperClass(obj);
+      if (wrapperclasstype === classFunction) return true;
+      else if (Object.is(classFunction, Object)) return true;
+      else return false;
+
+    } catch {
+      return false;
+    }
+
+  } else {
+    try {
+      var let = obj instanceof classFunction;
+      if (typeof classFunction === 'object') return true;
+      else return let;
+    } catch {
+      return false;
+    }
+  }
+};
+
+var test1 = () => checkIfInstanceOf(new Date(), Date);
+
+class Animal {};
+class Dog extends Animal {};
+var test2 = () => checkIfInstanceOf(new Dog(), Animal); // true
+
+var test3 = () => checkIfInstanceOf(Date, Date);
+
+var test4 = () => alert(checkIfInstanceOf(5, Number));
+
+var test5 = () => alert(checkIfInstanceOf(Object, Object));
+
+/**
+ * checkIfInstanceOf(new Date(), Date); // true
+ */
+</script>
