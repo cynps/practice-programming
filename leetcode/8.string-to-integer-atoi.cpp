@@ -9,8 +9,8 @@ public:
     bool is_minus = false;
     bool fix_posneg = false;
     bool digit_readin = false;
-    int min_int = 1<<31;
-    int max_int = (long long)min_int * -1 - 1;
+    // int min_int = 1<<31;
+    // int max_int = (long long)min_int * -1 - 1;
 
     for (int i=0;i<s.length();++i) {
       if (is_front && s[i] == ' ') {
@@ -37,12 +37,12 @@ public:
           ans += s[i] - '0';
 
           if (is_minus) {
-            if (ans * -1 < min_int) {
-              ans = min_int;
+            if (ans * -1 < INT_MIN) {
+              ans = INT_MIN;
               break;
             }
-          } else if (ans > max_int) {
-            ans = max_int;
+          } else if (ans > INT_MAX) {
+            ans = INT_MAX;
             break;
           }
         }
