@@ -7,9 +7,7 @@ public:
       string ans = "";
       vector<int> digit;
       while (num > 0) {
-        int tmp = num % 10;
-        digit.push_back(tmp);
-        num -= tmp;
+        digit.push_back(num % 10);
         num /= 10;
       }
       
