@@ -5,10 +5,11 @@ class Solution {
 public:
     string intToRoman(int num) {
       string ans = "";
-      vector<int> digit;
-      while (num > 0) {
-        digit.push_back(num % 10);
+      int digit[4], cnt=0;
+      for (int i=0; num > 0; ++i) {
+        digit[i] = num % 10;
         num /= 10;
+        cnt++;
       }
       
       string r[4][4] = {
@@ -20,7 +21,7 @@ public:
 
       // for (int i=digit.size()-1; i>=0; --i) cout << digit[i] << endl;
 
-      for (int i=digit.size()-1; i>=0; --i) {
+      for (int i = --cnt; i>=0; --i) {
         if (digit[i] == 9) ans += r[i][3];  
         else if (digit[i] == 4) ans += r[i][2];
         else {
